@@ -11,7 +11,7 @@
 #pragma once
 
 #include <JuceHeader.h>
-#include <ea_soundtouch/ea_soundtouch.h>
+#include "SoundTouch/SoundTouch.h"
 
 //==============================================================================
 /**
