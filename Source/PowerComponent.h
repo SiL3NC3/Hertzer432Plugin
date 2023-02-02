@@ -63,6 +63,8 @@ public:
     static const int buttonon_pngSize;
     static const char* wiRsymbolwhite_svg;
     static const int wiRsymbolwhite_svgSize;
+    static const char* hertzerLogo_png;
+    static const int hertzerLogo_pngSize;
 
 
 private:
@@ -79,7 +81,8 @@ private:
     std::unique_ptr<juce::HyperlinkButton> juce__hyperlinkButton2;
     std::unique_ptr<juce::Label> juce__label;
     juce::Image cachedImage_background_png_1;
-    std::unique_ptr<juce::Drawable> drawable2;
+    juce::Image cachedImage_hertzerLogo_png_2;
+    std::unique_ptr<juce::Drawable> drawable3;
 
 
     //==============================================================================

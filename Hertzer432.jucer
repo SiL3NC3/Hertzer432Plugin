@@ -5,6 +5,13 @@
   <MAINGROUP id="OAkCUI" name="Hertzer432">
     <GROUP id="{6F76074B-6DA0-2A01-EDFB-5646B12BDF87}" name="Source">
       <GROUP id="{93B15928-4676-195F-51E9-073062E91231}" name="Design">
+        <FILE id="dlyyZF" name="Background.png" compile="0" resource="0" file="Source/Resources/Background.png"/>
+        <FILE id="avGiIP" name="Button-OFF.png" compile="0" resource="0" file="Source/Resources/Button-OFF.png"/>
+        <FILE id="vH4ZOC" name="Button-ON.png" compile="0" resource="0" file="Source/Resources/Button-ON.png"/>
+        <FILE id="yIm4Rn" name="HertzerLogo.png" compile="0" resource="0" file="Source/Resources/HertzerLogo.png"/>
+        <FILE id="jVGXcR" name="JUCE.png" compile="0" resource="0" file="Source/Resources/JUCE.png"/>
+        <FILE id="S4NNPq" name="wiR-Symbol-white.svg" compile="0" resource="0"
+              file="Source/Resources/wiR-Symbol-white.svg"/>
         <FILE id="PfZfQt" name="Button-ON.psd" compile="0" resource="0" file="Source/Resources/Button-ON.psd"/>
         <FILE id="CwWhZt" name="Button-OFF.psd" compile="0" resource="0" file="Source/Resources/Button-OFF.psd"/>
         <FILE id="zaHi36" name="1-and-0-power-switch-psd.psd" compile="0" resource="0"

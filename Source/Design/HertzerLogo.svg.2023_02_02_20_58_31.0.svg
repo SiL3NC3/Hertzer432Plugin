@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 297 210"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="HertzerLogo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.0860826"
+     inkscape:cx="552.90452"
+     inkscape:cy="452.08346"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <filter
+       inkscape:label="3D Mother of Pearl"
+       inkscape:menu="Materials"
+       inkscape:menu-tooltip="3D warped, iridescent pearly shell texture"
+       style="color-interpolation-filters:sRGB"
+       id="filter1204"
+       x="-0.17082632"
+       y="-0.44387245"
+       width="1.3416526"
+       height="1.8877449">
+      <feColorMatrix
+         type="saturate"
+         in="SourceGraphic"
+         values="0"
+         id="feColorMatrix1192" />
+      <feColorMatrix
+         values="3 0 0 0 -0.3 0 3 0 0 -0.3 0 0 3 0 -0.3 0 0 0 1 0"
+         result="result0"
+         id="feColorMatrix1194" />
+      <feTurbulence
+         baseFrequency="0.111"
+         numOctaves="2"
+         type="fractalNoise"
+         id="feTurbulence1196" />
+      <feColorMatrix
+         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 -200"
+         id="feColorMatrix1198" />
+      <feGaussianBlur
+         stdDeviation="1"
+         id="feGaussianBlur1200" />
+      <feComposite
+         in2="result0"
+         operator="atop"
+         id="feComposite1202"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix1236" />
+      <feGaussianBlur
+         id="feGaussianBlur1238"
+         result="result8"
+         stdDeviation="3"
+         in="fbSourceGraphic" />
+      <feTurbulence
+         id="feTurbulence1240"
+         baseFrequency="0.03 0.03"
+         numOctaves="8"
+         type="fractalNoise"
+         result="result7"
+         seed="77" />
+      <feColorMatrix
+         id="feColorMatrix1242"
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1.6 -0.6 "
+         result="result5" />
+      <feComposite
+         in2="result8"
+         id="feComposite1244"
+         operator="in"
+         in="result7"
+         result="result6" />
+      <feDisplacementMap
+         in2="result6"
+         id="feDisplacementMap1246"
+         result="result4"
+         scale="60"
+         yChannelSelector="A"
+         xChannelSelector="A"
+         in="result5" />
+      <feConvolveMatrix
+         id="feConvolveMatrix1248"
+         order="3 3"
+         kernelMatrix="2 0 0 0 4 0 0 0 -2 "
+         targetX="2"
+         targetY="2"
+         divisor="2"
+         result="result9" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite1250"
+         operator="atop"
+         in="result9"
+         result="result10" />
+      <feBlend
+         in2="result10"
+         id="feBlend1252"
+         mode="darken"
+         result="fbSourceGraphic" />
+      <feGaussianBlur
+         id="feGaussianBlur1254"
+         result="result0"
+         in="fbSourceGraphic"
+         stdDeviation="5" />
+      <feSpecularLighting
+         id="feSpecularLighting1256"
+         specularExponent="25"
+         specularConstant="1"
+         surfaceScale="5"
+         lighting-color="#f2d76c"
+         result="result1"
+         in="result0">
+        <feDistantLight
+           id="feDistantLight1258"
+           azimuth="235"
+           elevation="60" />
+      </feSpecularLighting>
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite1260"
+         operator="in"
+         result="result2"
+         in="result1" />
+      <feComposite
+         in2="result2"
+         id="feComposite1262"
+         k3="1"
+         k2="1"
+         operator="arithmetic"
+         result="result4"
+         in="fbSourceGraphic"
+         k1="0"
+         k4="0" />
+    </filter>
+    <filter
+       inkscape:menu-tooltip="3D warped, iridescent pearly shell texture"
+       inkscape:menu="Materials"
+       inkscape:label="3D Mother of Pearl"
+       height="2.1028725"
+       y="-0.55143625"
+       width="1.4244455"
+       x="-0.21222273"
+       style="color-interpolation-filters:sRGB;"
+       id="filter3613">
+      <feGaussianBlur
+         result="result8"
+         stdDeviation="4"
+         id="feGaussianBlur3585" />
+      <feTurbulence
+         baseFrequency="0.025 0.2"
+         numOctaves="3"
+         type="fractalNoise"
+         result="result7"
+         seed="22"
+         id="feTurbulence3587" />
+      <feComposite
+         in2="result8"
+         operator="in"
+         in="SourceGraphic"
+         result="result6"
+         id="feComposite3589" />
+      <feDisplacementMap
+         in2="result6"
+         result="result4"
+         scale="50"
+         yChannelSelector="A"
+         xChannelSelector="A"
+         in="result7"
+         id="feDisplacementMap3591" />
+      <feFlood
+         flood-color="rgb(230,211,138)"
+         flood-opacity="1"
+         id="feFlood3593" />
+      <feComposite
+         in2="result4"
+         operator="atop"
+         result="result2"
+         id="feComposite3595" />
+      <feComposite
+         in2="SourceGraphic"
+         operator="atop"
+         in="result2"
+         result="result9"
+         id="feComposite3597" />
+      <feGaussianBlur
+         result="result0"
+         in="result9"
+         stdDeviation="8"
+         id="feGaussianBlur3599" />
+      <feSpecularLighting
+         specularExponent="15"
+         specularConstant="0.7"
+         surfaceScale="5"
+         lighting-color="rgb(255,255,255)"
+         result="result1"
+         in="result0"
+         id="feSpecularLighting3603">
+        <feDistantLight
+           azimuth="235"
+           elevation="50"
+           id="feDistantLight3601" />
+      </feSpecularLighting>
+      <feComposite
+         operator="in"
+         result="result2"
+         in="result1"
+         in2="result9"
+         id="feComposite3605" />
+      <feComposite
+         k3="0.5"
+         k2="0.5"
+         operator="arithmetic"
+         result="result4"
+         in="result9"
+         in2="result2"
+         id="feComposite3607" />
+      <feConvolveMatrix
+         order="3 3"
+         kernelMatrix="2 0 0 0 2 0 0 0 -2 "
+         targetX="2"
+         targetY="2"
+         result="result10"
+         id="feConvolveMatrix3609" />
+      <feBlend
+         mode="multiply"
+         in="result10"
+         in2="result10"
+         id="feBlend3611"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix3615" />
+      <feGaussianBlur
+         id="feGaussianBlur3617"
+         result="result8"
+         stdDeviation="3"
+         in="fbSourceGraphic" />
+      <feTurbulence
+         id="feTurbulence3619"
+         baseFrequency="0.03 0.03"
+         numOctaves="8"
+         type="fractalNoise"
+         result="result7"
+         seed="77" />
+      <feColorMatrix
+         id="feColorMatrix3621"
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1.6 -0.6 "
+         result="result5" />
+      <feComposite
+         in2="result8"
+         id="feComposite3623"
+         operator="in"
+         in="result7"
+         result="result6" />
+      <feDisplacementMap
+         in2="result6"
+         id="feDisplacementMap3625"
+         result="result4"
+         scale="60"
+         yChannelSelector="A"
+         xChannelSelector="A"
+         in="result5" />
+      <feConvolveMatrix
+         id="feConvolveMatrix3627"
+         order="3 3"
+         kernelMatrix="2 0 0 0 4 0 0 0 -2 "
+         targetX="2"
+         targetY="2"
+         divisor="2"
+         result="result9" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite3629"
+         operator="atop"
+         in="result9"
+         result="result10" />
+      <feBlend
+         in2="result10"
+         id="feBlend3631"
+         mode="darken"
+         result="fbSourceGraphic" />
+      <feGaussianBlur
+         id="feGaussianBlur3633"
+         result="result0"
+         in="fbSourceGraphic"
+         stdDeviation="5" />
+      <feSpecularLighting
+         id="feSpecularLighting3635"
+         specularExponent="25"
+         specularConstant="1"
+         surfaceScale="5"
+         lighting-color="rgb(242,215,108)"
+         result="result1"
+         in="result0">
+        <feDistantLight
+           id="feDistantLight3637"
+           azimuth="235"
+           elevation="60" />
+      </feSpecularLighting>
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite3639"
+         operator="in"
+         result="result2"
+         in="result1" />
+      <feComposite
+         in2="result2"
+         id="feComposite3641"
+         k3="1"
+         k2="1"
+         operator="arithmetic"
+         result="result4"
+         in="fbSourceGraphic" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter4742"
+       inkscape:label="filter2" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:63.91px;line-height:1.25;font-family:'Neudoerffer Fraktur LT Pro';-inkscape-font-specification:'Neudoerffer Fraktur LT Pro Bold';display:inline;fill:#ffffff;fill-opacity:1;stroke-width:3.01494"
+       x="29.074944"
+       y="118.00158"
+       id="text3583"><tspan
+         sodipodi:role="line"
+         id="tspan3581"
+         x="0"
+         y="0"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Neudoerffer Fraktur LT Pro';-inkscape-font-specification:'Neudoerffer Fraktur LT Pro Bold';fill:#ffffff;fill-opacity:1;stroke-width:3.01494">Hertzer432</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:63.91px;line-height:1.25;font-family:'Neudoerffer Fraktur LT Pro';-inkscape-font-specification:'Neudoerffer Fraktur LT Pro Bold';display:none;fill:#ffffff;fill-opacity:0.266393;stroke-width:3.01494;filter:url(#filter3613)"
+       x="29.074944"
+       y="118.00158"
+       id="text320"><tspan
+         sodipodi:role="line"
+         id="tspan318"
+         x="29.074944"
+         y="118.00158"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Neudoerffer Fraktur LT Pro';-inkscape-font-specification:'Neudoerffer Fraktur LT Pro Bold';fill:#ffffff;fill-opacity:0.266393;stroke-width:3.01494">Hertzer432</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:63.91px;line-height:1.25;font-family:'Neudoerffer Fraktur LT Pro';-inkscape-font-specification:'Neudoerffer Fraktur LT Pro Bold';display:inline;fill:#ffffff;fill-opacity:1;stroke-width:3.01494"
+       x="29.074944"
+       y="118.00158"
+       id="text4377"><tspan
+         sodipodi:role="line"
+         id="tspan4375"
+         x="0"
+         y="0"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Neudoerffer Fraktur LT Pro';-inkscape-font-specification:'Neudoerffer Fraktur LT Pro Bold';fill:#ffffff;fill-opacity:1;stroke-width:3.01494">Hertzer432</tspan></text>
+  </g>
+</svg>

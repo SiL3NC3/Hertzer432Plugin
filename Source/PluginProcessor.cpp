@@ -185,9 +185,9 @@ bool SoundTouchPlugAudioProcessor::hasEditor() const
 
 juce::AudioProcessorEditor* SoundTouchPlugAudioProcessor::createEditor()
 {
-	editor = new juce::GenericAudioProcessorEditor(this);
-	return editor;
-	//return new SoundTouchPlugAudioProcessorEditor(*this);
+	//editor = new juce::GenericAudioProcessorEditor(this);
+	//return editor;
+	return new SoundTouchPlugAudioProcessorEditor(*this);
 }
 
 //==============================================================================

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="493"
+   height="200"
+   viewBox="0 0 130.43958 52.916666"
+   version="1.1"
+   id="svg185"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="HertzerLogo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview187"
+     pagecolor="#272727"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.0888418"
+     inkscape:cx="241.76076"
+     inkscape:cy="123.51342"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs182">
+    <filter
+       inkscape:label="Cracked Lava"
+       inkscape:menu="Materials"
+       inkscape:menu-tooltip="A volcanic texture, a little like leather"
+       style="color-interpolation-filters:sRGB;"
+       id="filter1895"
+       x="-0.23983328"
+       y="-0.6231791"
+       width="1.5030649"
+       height="2.3071562">
+      <feGaussianBlur
+         result="result0"
+         in="SourceGraphic"
+         stdDeviation="0.5"
+         id="feGaussianBlur1863" />
+      <feTurbulence
+         baseFrequency="0.042"
+         seed="488"
+         numOctaves="7"
+         result="result1"
+         id="feTurbulence1865" />
+      <feDisplacementMap
+         result="result5"
+         xChannelSelector="R"
+         scale="0"
+         in2="result1"
+         in="result1"
+         yChannelSelector="G"
+         id="feDisplacementMap1867" />
+      <feComposite
+         result="result2"
+         operator="in"
+         in2="result5"
+         in="result0"
+         id="feComposite1869" />
+      <feSpecularLighting
+         lighting-color="rgb(255,230,136)"
+         surfaceScale="2"
+         result="result4"
+         specularConstant="2"
+         specularExponent="65"
+         in="result2"
+         id="feSpecularLighting1873">
+        <feDistantLight
+           elevation="62"
+           azimuth="225"
+           id="feDistantLight1871" />
+      </feSpecularLighting>
+      <feComposite
+         k1="2.5"
+         k3="1"
+         k2="-0.5"
+         in2="result2"
+         in="result4"
+         operator="arithmetic"
+         result="result91"
+         id="feComposite1875" />
+      <feBlend
+         result="fbSourceGraphic"
+         mode="multiply"
+         in2="result91"
+         id="feBlend1877" />
+      <feColorMatrix
+         values="1 0 0 -1 0 1 0 1 -1 0 1 0 0 -1 0 -2 -0.5 0 5 -2"
+         in="fbSourceGraphic"
+         result="fbSourceGraphicAlpha"
+         id="feColorMatrix1879" />
+      <feGaussianBlur
+         stdDeviation="8"
+         in="fbSourceGraphicAlpha"
+         result="result0"
+         id="feGaussianBlur1881" />
+      <feOffset
+         dx="2"
+         dy="2"
+         in="result0"
+         result="result3"
+         id="feOffset1883" />
+      <feSpecularLighting
+         in="result0"
+         result="result1"
+         lighting-color="rgb(255,255,255)"
+         surfaceScale="4"
+         specularConstant="0.8"
+         specularExponent="15"
+         id="feSpecularLighting1887">
+        <fePointLight
+           x="-5000"
+           y="-10000"
+           z="20000"
+           id="fePointLight1885" />
+      </feSpecularLighting>
+      <feComposite
+         in2="fbSourceGraphicAlpha"
+         in="result1"
+         result="result2"
+         operator="in"
+         id="feComposite1889" />
+      <feComposite
+         in="fbSourceGraphic"
+         result="result4"
+         operator="arithmetic"
+         k2="2"
+         k3="2"
+         in2="result2"
+         id="feComposite1891" />
+      <feBlend
+         mode="darken"
+         in2="result4"
+         id="feBlend1893" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:24.1526px;line-height:1.25;font-family:'Segoe UI Symbol';-inkscape-font-specification:'Segoe UI Symbol';display:inline;fill:#00ff00;stroke-width:1.13939"
+       x="22.336941"
+       y="27.714266"
+       id="text360"><tspan
+         sodipodi:role="line"
+         id="tspan358"
+         x="22.336941"
+         y="27.714266"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Neudoerffer Fraktur LT Pro';-inkscape-font-specification:'Neudoerffer Fraktur LT Pro';fill:#00ff00;stroke-width:1.13939">Hertzer432</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:24.1526px;line-height:1.25;font-family:'Segoe UI Symbol';-inkscape-font-specification:'Segoe UI Symbol';stroke-width:0.2;fill:#00fa00;stroke:#000500;stroke-opacity:1;stroke-dasharray:none;fill-opacity:0.16725978;filter:url(#filter1895)"
+       x="22.336941"
+       y="27.714266"
+       id="text534"><tspan
+         sodipodi:role="line"
+         id="tspan532"
+         x="22.336941"
+         y="27.714266"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Neudoerffer Fraktur LT Pro';-inkscape-font-specification:'Neudoerffer Fraktur LT Pro';stroke-width:0.2;fill:#00fa00;stroke:#000500;stroke-opacity:1;stroke-dasharray:none;fill-opacity:0.16725978">Hertzer432</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:0.16726;stroke:none;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect1974"
+       width="89.425545"
+       height="35.592888"
+       x="20.13975"
+       y="8.6132259"
+       inkscape:label="ExportBlank"
+       inkscape:export-filename="..\Resources\HertzerLogo.png"
+       inkscape:export-xdpi="121"
+       inkscape:export-ydpi="121" />
+  </g>
+</svg>
