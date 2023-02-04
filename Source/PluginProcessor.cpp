@@ -25,10 +25,16 @@ SoundTouchPlugAudioProcessor::SoundTouchPlugAudioProcessor()
 #endif
 {
 	m_st = std::make_unique<soundtouch::SoundTouch>();
-	m_par_enabled = new juce::AudioParameterBool{ "enable","Enabled",true };
-	m_par_semitones = new juce::AudioParameterFloat{ "shift","Semitones",-24.0,24.0,-4.0 };
-	addParameter(m_par_enabled);
-	addParameter(m_par_semitones);
+	m_enabled = std::make_unique<bool>(true);
+	m_locked = std::make_unique<bool>(true);
+	m_semitones = std::make_unique<float>(0.0);
+
+	//m_par_enabled = new juce::AudioParameterBool{ "enable","Enabled",true };
+	//m_par_locked = new juce::AudioParameterBool{ "locked","Enabled",true };
+	//m_par_semitones = new juce::AudioParameterFloat{ "shift","Semitones",-24.0,24.0,-4.0 };
+	//addParameter(m_par_enabled);
+	//addParameter(m_par_locked);
+	//addParameter(m_par_semitones);
 
 	//m_label = new juce::Label("Hertzer432");   // NOT WORKING (>>> register editor.resize event???)
 	//m_label->setBounds(1, 1, 100, 20);
@@ -104,6 +110,9 @@ void SoundTouchPlugAudioProcessor::changeProgramName(int index, const juce::Stri
 //==============================================================================
 void SoundTouchPlugAudioProcessor::prepareToPlay(double sampleRate, int samplesPerBlock)
 {
+	*m_enabled = false;
+	//*m_par_semitones = 0.0;
+
 	m_st->setChannels(2);
 	m_st->setSampleRate(sampleRate);
 	m_st->setPitchSemiTones(0.0);
@@ -143,7 +152,8 @@ bool SoundTouchPlugAudioProcessor::isBusesLayoutSupported(const BusesLayout& lay
 
 void SoundTouchPlugAudioProcessor::processBlock(juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiMessages)
 {
-	if (*m_par_enabled) {
+	//if (*m_par_enabled) {
+	if (*m_enabled) {
 
 		juce::ScopedNoDenormals noDenormals;
 		const int nch = 2;
@@ -152,7 +162,8 @@ void SoundTouchPlugAudioProcessor::processBlock(juce::AudioBuffer<float>& buffer
 		for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
 			buffer.clear(i, 0, buffer.getNumSamples());
 
-		m_st->setPitchSemiTones(*m_par_semitones);
+		//m_st->setPitchSemiTones(*m_par_semitones);
+		m_st->setPitchSemiTones(*m_semitones);
 
 		// copy input samples in interleaved format to helper buffer
 		for (int i = 0; i < nch; ++i)
@@ -202,6 +213,26 @@ void SoundTouchPlugAudioProcessor::setStateInformation(const void* data, int siz
 {
 	// You should use this method to restore your parameters from this memory block,
 	// whose contents will have been created by the getStateInformation() call.
+}
+
+//==============================================================================
+bool SoundTouchPlugAudioProcessor::getEnabled() {
+	return *m_enabled;
+}
+void SoundTouchPlugAudioProcessor::toggleEnabled() {
+	*m_enabled = !*m_enabled;
+}
+bool SoundTouchPlugAudioProcessor::getLocked() {
+	return *m_locked;
+}
+void SoundTouchPlugAudioProcessor::toggleLocked() {
+	*m_locked = !*m_locked;
+}
+double SoundTouchPlugAudioProcessor::getPitch() {
+	return (double)*m_semitones;
+}
+void SoundTouchPlugAudioProcessor::setPitch(double pitch) {
+	*m_semitones = (float)pitch;
 }
 
 //==============================================================================

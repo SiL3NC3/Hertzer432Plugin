@@ -60,6 +60,10 @@ private:
 	juce::Image cachedImage_hertzerLogo_png_2;
 	std::unique_ptr<juce::Drawable> drawable3;
 
+	void initialize();
+	void update();
+
+	std::unique_ptr<float> last_semitones;
 
 	//juce::AudioParameterBool* m_par_enabled = nullptr;
 	//juce::AudioParameterFloat* m_par_semitones = nullptr;
