@@ -71,11 +71,6 @@ private:
 	std::unique_ptr<float> m_semitones;
 
 	std::vector<float> m_buf; // helper buffer to get samples into/from SoundTouch
-	juce::AudioParameterBool* m_par_enabled = nullptr;
-	juce::AudioParameterBool* m_par_locked = nullptr;
-	juce::AudioParameterFloat* m_par_semitones = nullptr;
-	juce::Label* m_label = nullptr;
-	juce::GenericAudioProcessorEditor* editor = nullptr;
 
 	//==============================================================================
 	JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(SoundTouchPlugAudioProcessor)

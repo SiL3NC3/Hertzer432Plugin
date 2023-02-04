@@ -27,18 +27,7 @@ SoundTouchPlugAudioProcessor::SoundTouchPlugAudioProcessor()
 	m_st = std::make_unique<soundtouch::SoundTouch>();
 	m_enabled = std::make_unique<bool>(true);
 	m_locked = std::make_unique<bool>(true);
-	m_semitones = std::make_unique<float>(0.0);
-
-	//m_par_enabled = new juce::AudioParameterBool{ "enable","Enabled",true };
-	//m_par_locked = new juce::AudioParameterBool{ "locked","Enabled",true };
-	//m_par_semitones = new juce::AudioParameterFloat{ "shift","Semitones",-24.0,24.0,-4.0 };
-	//addParameter(m_par_enabled);
-	//addParameter(m_par_locked);
-	//addParameter(m_par_semitones);
-
-	//m_label = new juce::Label("Hertzer432");   // NOT WORKING (>>> register editor.resize event???)
-	//m_label->setBounds(1, 1, 100, 20);
-	//editor->addAndMakeVisible(m_label);
+	m_semitones = std::make_unique<float>();
 }
 
 SoundTouchPlugAudioProcessor::~SoundTouchPlugAudioProcessor()
@@ -110,9 +99,6 @@ void SoundTouchPlugAudioProcessor::changeProgramName(int index, const juce::Stri
 //==============================================================================
 void SoundTouchPlugAudioProcessor::prepareToPlay(double sampleRate, int samplesPerBlock)
 {
-	*m_enabled = false;
-	//*m_par_semitones = 0.0;
-
 	m_st->setChannels(2);
 	m_st->setSampleRate(sampleRate);
 	m_st->setPitchSemiTones(0.0);
@@ -196,8 +182,6 @@ bool SoundTouchPlugAudioProcessor::hasEditor() const
 
 juce::AudioProcessorEditor* SoundTouchPlugAudioProcessor::createEditor()
 {
-	//editor = new juce::GenericAudioProcessorEditor(this);
-	//return editor;
 	return new SoundTouchPlugAudioProcessorEditor(*this);
 }
 
@@ -221,6 +205,10 @@ bool SoundTouchPlugAudioProcessor::getEnabled() {
 }
 void SoundTouchPlugAudioProcessor::toggleEnabled() {
 	*m_enabled = !*m_enabled;
+	if (*m_enabled)
+		DBG("Enabled");
+	else
+		DBG("Disabled");
 }
 bool SoundTouchPlugAudioProcessor::getLocked() {
 	return *m_locked;

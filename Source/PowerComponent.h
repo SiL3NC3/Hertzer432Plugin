@@ -80,6 +80,8 @@ private:
     std::unique_ptr<juce::Label> juce__label3;
     std::unique_ptr<juce::HyperlinkButton> juce__hyperlinkButton2;
     std::unique_ptr<juce::Label> juce__label;
+    std::unique_ptr<juce::Label> juce__label4;
+    std::unique_ptr<juce::HyperlinkButton> juce__hyperlinkButton3;
     juce::Image cachedImage_background_png_1;
     juce::Image cachedImage_hertzerLogo_png_2;
     std::unique_ptr<juce::Drawable> drawable3;
