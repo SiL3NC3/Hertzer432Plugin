@@ -23,11 +23,35 @@ SoundTouchPlugAudioProcessor::SoundTouchPlugAudioProcessor()
 #endif
 	)
 #endif
-{
+	, parameters(*this,
+		nullptr,
+		juce::Identifier("Hertzer432Plugin"),
+		{ std::make_unique<juce::AudioParameterFloat>(
+			"semitones",
+			"Semitones",
+			juce::NormalisableRange{-24.f,
+									24.f,
+									0.001f},
+			1.f),
+		 std::make_unique<juce::AudioParameterBool>(
+			"enabled",
+			"Enabled",
+			true),
+		 std::make_unique<juce::AudioParameterBool>(
+			"locked",
+			"Locked",
+			true)
+		}) {
+
 	m_st = std::make_unique<soundtouch::SoundTouch>();
-	m_enabled = std::make_unique<bool>(true);
-	m_locked = std::make_unique<bool>(true);
-	m_semitones = std::make_unique<float>();
+
+	semitonesParameter = parameters.getRawParameterValue("semitones");
+	enabledParameter = parameters.getRawParameterValue("enabled");
+	lockedParameter = parameters.getRawParameterValue("locked");
+
+	//m_enabled = std::make_unique<bool>(true);
+	//m_locked = std::make_unique<bool>(true);
+	//m_semitones = std::make_unique<float>();
 }
 
 SoundTouchPlugAudioProcessor::~SoundTouchPlugAudioProcessor()
@@ -139,7 +163,8 @@ bool SoundTouchPlugAudioProcessor::isBusesLayoutSupported(const BusesLayout& lay
 void SoundTouchPlugAudioProcessor::processBlock(juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiMessages)
 {
 	//if (*m_par_enabled) {
-	if (*m_enabled) {
+	//if (*m_enabled) {
+	if (*enabledParameter) {
 
 		juce::ScopedNoDenormals noDenormals;
 		const int nch = 2;
@@ -149,7 +174,8 @@ void SoundTouchPlugAudioProcessor::processBlock(juce::AudioBuffer<float>& buffer
 			buffer.clear(i, 0, buffer.getNumSamples());
 
 		//m_st->setPitchSemiTones(*m_par_semitones);
-		m_st->setPitchSemiTones(*m_semitones);
+		//m_st->setPitchSemiTones(*m_semitones);
+		m_st->setPitchSemiTones(*semitonesParameter);
 
 		// copy input samples in interleaved format to helper buffer
 		for (int i = 0; i < nch; ++i)
@@ -191,36 +217,52 @@ void SoundTouchPlugAudioProcessor::getStateInformation(juce::MemoryBlock& destDa
 	// You should use this method to store your parameters in the memory block.
 	// You could do that either as raw data, or use the XML or ValueTree classes
 	// as intermediaries to make it easy to save and load complex data.
+
+	auto state = parameters.copyState();
+	std::unique_ptr<juce::XmlElement> xml(state.createXml());
+	copyXmlToBinary(*xml, destData);
 }
 
 void SoundTouchPlugAudioProcessor::setStateInformation(const void* data, int sizeInBytes)
 {
 	// You should use this method to restore your parameters from this memory block,
 	// whose contents will have been created by the getStateInformation() call.
+
+	std::unique_ptr<juce::XmlElement> xmlState(getXmlFromBinary(data, sizeInBytes));
+
+	if (xmlState.get() != nullptr)
+		if (xmlState->hasTagName(parameters.state.getType()))
+			parameters.replaceState(juce::ValueTree::fromXml(*xmlState));
 }
 
 //==============================================================================
 bool SoundTouchPlugAudioProcessor::getEnabled() {
-	return *m_enabled;
+	//return *m_enabled;
+	return *enabledParameter;
 }
 void SoundTouchPlugAudioProcessor::toggleEnabled() {
-	*m_enabled = !*m_enabled;
-	if (*m_enabled)
+	//*m_enabled = !*m_enabled;
+	*enabledParameter = !*enabledParameter;
+	if (*enabledParameter)
 		DBG("Enabled");
 	else
 		DBG("Disabled");
 }
 bool SoundTouchPlugAudioProcessor::getLocked() {
-	return *m_locked;
+	//return *m_locked;
+	return *lockedParameter;
 }
 void SoundTouchPlugAudioProcessor::toggleLocked() {
-	*m_locked = !*m_locked;
+	//*m_locked = !*m_locked;
+	*lockedParameter = !*lockedParameter;
 }
-double SoundTouchPlugAudioProcessor::getPitch() {
-	return (double)*m_semitones;
+float SoundTouchPlugAudioProcessor::getPitch() {
+	//return (double)*m_semitones;
+	return *semitonesParameter;
 }
-void SoundTouchPlugAudioProcessor::setPitch(double pitch) {
-	*m_semitones = (float)pitch;
+void SoundTouchPlugAudioProcessor::setPitch(float pitch) {
+	//*m_semitones = (float)pitch;
+	*semitonesParameter = pitch;
 }
 
 //==============================================================================

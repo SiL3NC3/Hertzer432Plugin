@@ -61,14 +61,18 @@ public:
 	void toggleEnabled();
 	bool getLocked();
 	void toggleLocked();
-	double getPitch();
-	void setPitch(double pitch);
+	float getPitch();
+	void setPitch(float pitch);
 
 private:
+	juce::AudioProcessorValueTreeState parameters;
 	std::unique_ptr<soundtouch::SoundTouch> m_st;
-	std::unique_ptr<bool> m_enabled;
-	std::unique_ptr<bool> m_locked;
-	std::unique_ptr<float> m_semitones;
+	std::atomic<float>* semitonesParameter = nullptr;
+	std::atomic<float>* enabledParameter = nullptr;
+	std::atomic<float>* lockedParameter = nullptr;
+	//std::unique_ptr<bool> m_enabled;
+	//std::unique_ptr<bool> m_locked;
+	//std::unique_ptr<float> m_semitones;
 
 	std::vector<float> m_buf; // helper buffer to get samples into/from SoundTouch
 
